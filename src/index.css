@@ -1,0 +1,8 @@
+/* Keeps everything clean and consistent */
+* {
+  box-sizing: border-box;
+}
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
