@@ -1,0 +1,120 @@
+/* --- Clean Veed/CapCut style black layout --- */
+
+.video-editor-page {
+  background: #000;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.editor-layout {
+  display: flex;
+  height: calc(100vh - 64px); /* minus navbar */
+}
+
+/* Left icon bar */
+.sidebar-menu {
+  width: 70px;
+  background: #090909;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 12px;
+  border-right: 1px solid #1a1a1a;
+}
+
+/* Left panel */
+.left-panel {
+  width: 280px;
+  background: #0b0b0b;
+  border-right: 1px solid #151515;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+/* Center panel */
+.center-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #050505;
+  border-right: 1px solid #151515;
+  position: relative;
+}
+
+.preview-canvas {
+  flex: 1;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #151515;
+}
+
+.preview-img {
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.center-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-top: 1px solid #111;
+  background: #080808;
+}
+
+.timeline-container {
+  border-top: 1px solid #151515;
+  background: #090909;
+  height: 160px;
+  overflow-x: auto;
+}
+
+/* Right panel */
+.right-panel {
+  width: 320px;
+  background: #0b0b0b;
+  border-left: 1px solid #151515;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.btn-outline {
+  border: 1px solid #222;
+  background: transparent;
+  color: #ccc;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: #111;
+  color: #fff;
+}
+
+.btn-black {
+  background: #1db954;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Scroll */
+.left-panel::-webkit-scrollbar,
+.right-panel::-webkit-scrollbar {
+  width: 6px;
+}
+.left-panel::-webkit-scrollbar-thumb,
+.right-panel::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 4px;
+}

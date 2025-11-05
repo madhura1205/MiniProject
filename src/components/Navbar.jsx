@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
 
-function NavbarDashboard() {
+function Navbar() {
   return (
     <nav className="dashboard-navbar">
       <div className="nav-logo">Beat Canvas Dashboard</div>
