@@ -375,6 +375,26 @@
   border: 1px solid #2a2a2a;
 }
 
+
+
+.timeline-track {
+  position: relative;
+  height: 100px;
+  background-color: #111;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.segment:hover .resize-handle {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.segment:hover .segment-media-preview img {
+  opacity: 1;
+}
+
+
 /* ======= RESPONSIVE ======= */
 @media (max-width: 768px) {
   .editor-sidebar {
@@ -390,4 +410,133 @@
   .preview-box {
     max-width: 100%;
   }
+}
+
+
+
+
+
+
+
+/* ======= PHOTO POOL ======= */
+.photo-pool {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.pool-photo {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #333;
+  cursor: grab;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.pool-photo:hover {
+  transform: scale(1.05);
+  border-color: #4a90e2;
+}
+
+/* ======= SEGMENT MEDIA PREVIEW ======= */
+.segment-media-preview {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.segment-media-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.segment-media-preview img:hover {
+  opacity: 1;
+}
+
+/* ======= RESIZE HANDLE ======= */
+.resize-handle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: ew-resize;
+  transition: background 0.2s;
+}
+
+.resize-handle:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* ======= SEGMENT BODY ======= */
+.segment-body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* ======= SEGMENT TIMES ======= */
+.segment-times {
+  position: absolute;
+  bottom: 2px;
+  left: 4px;
+  font-size: 0.7rem;
+  color: #ddd;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+  z-index: 3;
+}
+
+/* ======= PREVIEW "Replace Media" BUTTON ======= */
+.preview-content button {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.preview-content button:hover {
+  background: #5aa1f2;
+}
+
+/* ======= DRAGGING VISUAL FEEDBACK ======= */
+.segment.dragging {
+  opacity: 0.7;
+  outline: 2px dashed #4a90e2;
+}
+
+.segment.resizing {
+  border-color: #4a90e2;
+}
+
+/* ======= PHOTO POOL EMPTY STATE ======= */
+.photo-pool > div {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #666;
 }
